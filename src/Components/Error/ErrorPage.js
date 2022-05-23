@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import images from "../../Assets/Images/error-page.gif";
 
 const ErrorPage = () => {
-  const img = images;
   return (
     <div
       style={{
-        background: `url(${img})`,
+        background: `url(${images})`,
         backgroundSize: "cover",
       }}
       className="hero min-h-screen"
