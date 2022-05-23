@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 const Business = () => {
   return (
     <div className="px-20 my-10">
-      <div class="stats stats-vertical lg:stats-horizontal shadow text-primary">
+      <div class="stats stats-vertical lg:stats-horizontal shadow text-primary text-center">
         <div class="stat px-16">
           <div class="stat-title">Customers</div>
           <div class="stat-value">
