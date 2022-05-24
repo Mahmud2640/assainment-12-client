@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import image from "../../Assets/Images/about.jpg";
 
 const Purchase = () => {
-  const { inventoryId } = useParams();
-  const [inventory, setInventory] = useState([]);
-
-  useEffect(() => {
-    fetch(`service.json/product/${inventoryId}`)
-      .then((res) => res.json())
-      .then((data) => setInventory(data));
-  }, [inventoryId]);
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      const name = e.target.name.value;
+      console.log(name);
+   };
+  
   return (
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row">
@@ -18,10 +14,10 @@ const Purchase = () => {
         <div>
           <h1 class="text-5xl font-bold">Box Office News!</h1>
           <p class="py-6">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div class="form-control w-full max-w-xs">
                 <label class="label">
-                  <span class="label-text">What is your name?</span>
+                  <span class="label-text">Name</span>
                 </label>
                 <input
                   type="text"
