@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Purchase from "../Purchase/Purchase";
 import PartsCard from "./PartsCard";
 
 const Parts = () => {
   const [parts, setParts] = useState([]);
+  const [booking, setBooking] = useState([null]);
+  
 
   useEffect(() => {
     fetch("service.json")
@@ -22,9 +25,15 @@ const Parts = () => {
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {parts.map((part) => (
-          <PartsCard key={part._id} part={part}></PartsCard>
+          <PartsCard
+            key={part._id}
+            part={part}
+            setBooking={setBooking}
+          ></PartsCard>
         ))}
       </div>
+      {booking && <Purchase booking={booking}></Purchase>}
+
     </div>
   );
 };
