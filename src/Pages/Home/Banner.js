@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="carousel w-full">
       <div className="carousel-item relative w-full">
-        <img src={image} class="w-full" alt="banner" />
+        <img src={image} className="w-full" alt="banner" />
       </div>
     </div>
   );
