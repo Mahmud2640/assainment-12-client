@@ -1,60 +1,65 @@
 import { Route, Routes } from "react-router-dom";
-import RequireAuth from "./Components/Auth/RequireAuth";
-import RequireAdmin from "./Components/Auth/RequireAdmin";
-import ErrorPage from "./Components/Error/ErrorPage";
-import Footer from "./Components/Footer/Footer";
-import Navbar from "./Components/Header/Navbar";
-import About from "./Pages/About/About";
-import Portfolio from "./Pages/Portfolio/Portfolio";
-import Blog from "./Pages/Blogs/Blog";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
+import Order from "./Pages/Dashboard/Order";
+import Profile from "./Pages/Dashboard/Profile";
+import Review from "./Pages/Dashboard/Review";
+import Booking from "./Pages/Home/Booking";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
-import Purchase from "./Pages/Purchase/Purchase";
-import Register from "./Pages/Register/Register";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import MyOrders from "./Pages/Dashboard/MyOrders";
-import AddReview from "./Pages/Dashboard/AddReview";
-import MyProfile from "./Pages/Dashboard/MyProfile";
-import AddProduct from "./Pages/Dashboard/Advance/AddProduct";
-import ManageProducts from "./Pages/Dashboard/Advance/ManageProducts";
-import ManageOrders from "./Pages/Dashboard/Advance/ManageOrders";
-import MakeAdmin from "./Pages/Dashboard/Advance/MakeAdmin";
+import RequireAuth from "./Pages/Login/RequireAuth";
+import SignUp from "./Pages/Login/SignUp";
+import Header from "./Pages/Share/Header/Header";
+import NotFound from "./Pages/Share/NotFound/NotFound";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import AddProduct from "./Pages/Dashboard/AddProduct";
+import ManageProducts from "./Pages/Dashboard/ManageProducts";
+import SeeAll from "./Pages/Home/SeeAll";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="mx-auto">
+      <Header></Header>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/portfolio" element={<Portfolio />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-
-        <Route path="*" element={<ErrorPage />} />
-        {/* RequireAuth */}
-        <Route element={<RequireAuth />}>
-          <Route path="/purchase" element={<Purchase />}></Route>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="home" element={<Home></Home>} />
+        <Route path="seeAll" element={<SeeAll />} />
+        {/* <Route path="dashboard" element={<Dashboard/>} /> */}
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<Profile></Profile>}></Route>
+          <Route path="review" element={<Review></Review>}></Route>
+          <Route path="order" element={<Order></Order>}></Route>
+          <Route path="makeAdmin" element={<MakeAdmin />}></Route>
+          <Route path="addProduct" element={<AddProduct />}></Route>
+          <Route path="manageProducts" element={<ManageProducts />}></Route>
+          {/* <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
+          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route> */}
         </Route>
-        {/* RequireAdmin */}
-        <Route element={<RequireAdmin />}>
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="/dashboard/my-orders" element={<MyOrders />} />
-            <Route path="/dashboard/add-review" element={<AddReview />} />
-            <Route path="/dashboard/my-profile" element={<MyProfile />} />
-            <Route path="/dashboard/add-product" element={<AddProduct />} />
-            <Route path="/dashboard/make-admin" element={<MakeAdmin />} />
-            <Route path="/dashboard/manage-order" element={<ManageOrders />} />
-            <Route
-              path="/dashboard/manage-products"
-              element={<ManageProducts />}
-            />
-          </Route>
-        </Route>
+        {/* login section */}
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        {/* require */}
+        <Route
+          path="parts/:id"
+          element={
+            <RequireAuth>
+              <Booking></Booking>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
-      <Footer />
+      <ToastContainer />
     </div>
   );
 }
