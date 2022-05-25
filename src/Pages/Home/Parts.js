@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
+import fetcher from "../../Api";
 import Purchase from "../Purchase/Purchase";
 import PartsCard from "./PartsCard";
 
 const Parts = () => {
   const [parts, setParts] = useState([]);
   const [booking, setBooking] = useState([null]);
-  
 
   useEffect(() => {
-    fetch("http://localhost:5000/service")
-      .then((res) => res.json())
-      .then((data) => setParts(data));
+    (async () => {
+      const res = await fetcher.get("/service");
+      setParts(res.data);
+    })();
   }, []);
 
   return (
@@ -33,7 +34,6 @@ const Parts = () => {
         ))}
       </div>
       {booking && <Purchase booking={booking}></Purchase>}
-
     </div>
   );
 };
