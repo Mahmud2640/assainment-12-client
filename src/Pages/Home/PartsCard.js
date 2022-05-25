@@ -5,8 +5,8 @@ const PartsCard = ({ part }) => {
   const { _id, name, image, description, price, available } = part;
   const navigate = useNavigate();
 
-  const navigateToUpdate = (id) => {
-    navigate(`/purchase/${id}`);
+  const navigateToUpdate = () => {
+    navigate("/purchase");
   };
   return (
     <div className="card lg:max-w-lg bg-base-100 shadow-xl">
@@ -21,7 +21,7 @@ const PartsCard = ({ part }) => {
 
         <div className="card-actions">
           <button
-            onClick={() => navigateToUpdate(_id)}
+            onClick={() => navigateToUpdate()}
             className="btn btn-primary"
           >
             Buy Now

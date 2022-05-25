@@ -36,7 +36,6 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
         {/* RequireAuth */}
         <Route element={<RequireAuth />}>
-          <Route path="/purchase/:productId" element={<Purchase />}></Route>
           <Route path="/purchase" element={<Purchase />}></Route>
         </Route>
         {/* RequireAdmin */}

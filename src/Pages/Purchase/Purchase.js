@@ -1,6 +1,11 @@
+import { useAuthState } from "react-firebase-hooks/auth";
 import image from "../../Assets/Images/about.jpg";
+import auth from "../../firebase.init";
 
 const Purchase = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+
    const handleSubmit = (e) => {
       e.preventDefault();
       const name = e.target.name.value;
@@ -21,7 +26,7 @@ const Purchase = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  value={user?.displayName || ''}
                   class="input input-bordered w-full max-w-xs"
                 />
                 <label class="label">
@@ -30,6 +35,14 @@ const Purchase = () => {
                 <input
                   type="text"
                   placeholder="Type here"
+                  class="input input-bordered w-full max-w-xs"
+                />
+                <label class="label">
+                  <span class="label-text">Your Email</span>
+                </label>
+                <input
+                  type="text"
+                  value={user?.email || ''}
                   class="input input-bordered w-full max-w-xs"
                 />
                 <label class="label">
