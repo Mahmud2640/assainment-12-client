@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const fetcher = axios.create({
-   baseURL: "https://localhost:5000",
+  baseURL: "https://peaceful-earth-04392.herokuapp.com",
 });
 
 export default fetcher;
