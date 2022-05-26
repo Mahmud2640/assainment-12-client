@@ -10,7 +10,7 @@ const MyPortfolio = () => {
       <p className="text-center font-mono font-bold text-2xl mb-4 text-secondary uppercase mt-14">
         user Profile
       </p>
-      <div class="card w-96 bg-base-100 mx-auto border-2 shadow-2xl hover:bg-slate-300 duration-700">
+      <div className="card w-96 bg-base-100 mx-auto border-2 shadow-2xl hover:bg-slate-300 duration-700">
         <figure>
           <img
             className="rounded-full my-5 "
@@ -22,11 +22,9 @@ const MyPortfolio = () => {
             alt="Shoes"
           />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">Name: {user.displayName}</h2>
+        <div className="card-body">
+          <h2 className="card-title">Name: {user.displayName}</h2>
           <p>Email: {user.email}</p>
-          
-          
         </div>
       </div>
     </div>

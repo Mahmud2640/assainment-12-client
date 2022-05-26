@@ -29,7 +29,7 @@ const Review = () => {
       <p className="text-2xl lg:text-left text-center text-primary font-thin pl-4 my-4 uppercase">
         put your feedback here :
       </p>
-      <div class="card lg:card-side bg-base-100 shadow-xl my-11 py-11">
+      <div className="card lg:card-side bg-base-100 shadow-xl my-11 py-11">
         <figure>
           <img className="w-9/12 " src={reviewpic} alt="Album" />
         </figure>

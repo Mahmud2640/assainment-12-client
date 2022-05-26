@@ -26,8 +26,8 @@ const ManageProducts = () => {
       <p className="text-2xl lg:text-left text-center text-primary font-bold pl-4 my-4 uppercase">
         management showing all product:
       </p>
-      <div class="overflow-x-auto">
-        <table class="table table-zebra w-full text-center">
+      <div className="overflow-x-auto">
+        <table className="table table-zebra w-full text-center">
           <thead>
             <tr>
               <th>s.no</th>

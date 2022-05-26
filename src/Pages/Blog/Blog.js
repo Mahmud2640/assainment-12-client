@@ -4,10 +4,10 @@ const Blog = () => {
   return (
     <div className="mt-10">
       <h1 className="text-5xl font-bold text-center">Ans To the Qus</h1>
-      <div class="stack flex justify-center items-center px-12 m-10">
-        <div class="card shadow-md bg-base-200 text-black-content">
-          <div class="card-body">
-            <h2 class="card-title">
+      <div className="stack flex justify-center items-center px-12 m-10">
+        <div className="card shadow-md bg-base-200 text-black-content">
+          <div className="card-body">
+            <h2 className="card-title">
               How will you improve the performance of a React Application?
             </h2>
             <ol>
@@ -24,10 +24,10 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <div class="stack flex justify-center items-center px-12 m-10">
-        <div class="card shadow-md bg-base-200 text-black-content">
-          <div class="card-body">
-            <h2 class="card-title">
+      <div className="stack flex justify-center items-center px-12 m-10">
+        <div className="card shadow-md bg-base-200 text-black-content">
+          <div className="card-body">
+            <h2 className="card-title">
               What are the different ways to manage a state in a React
               application?
             </h2>
@@ -46,10 +46,12 @@ const Blog = () => {
         </div>
       </div>
 
-      <div class="stack flex justify-center items-center px-12 m-10">
-        <div class="card shadow-md bg-base-200 text-black-content">
-          <div class="card-body">
-            <h2 class="card-title">How does prototypical inheritance work?</h2>
+      <div className="stack flex justify-center items-center px-12 m-10">
+        <div className="card shadow-md bg-base-200 text-black-content">
+          <div className="card-body">
+            <h2 className="card-title">
+              How does prototypical inheritance work?
+            </h2>
             <p>
               Every object with its methods and properties contains an internal
               and hidden property known as Prototype. The Prototypal Inheritance
@@ -63,10 +65,10 @@ const Blog = () => {
         </div>
       </div>
 
-      <div class="stack flex justify-center items-center px-12 m-10">
-        <div class="card shadow-md bg-base-200 text-black-content">
-          <div class="card-body">
-            <h2 class="card-title">
+      <div className="stack flex justify-center items-center px-12 m-10">
+        <div className="card shadow-md bg-base-200 text-black-content">
+          <div className="card-body">
+            <h2 className="card-title">
               Why you do not set the state directly in React. For example, if
               you have const [products, setProducts] = useState([]). Why you do
               not set products = [...] instead, you use the setProducts
@@ -83,10 +85,10 @@ const Blog = () => {
         </div>
       </div>
 
-      <div class="stack flex justify-center items-center px-12 m-10">
-        <div class="card shadow-md bg-base-200 text-black-content">
-          <div class="card-body">
-            <h2 class="card-title">
+      <div className="stack flex justify-center items-center px-12 m-10">
+        <div className="card shadow-md bg-base-200 text-black-content">
+          <div className="card-body">
+            <h2 className="card-title">
               What is a unit test? Why should write unit tests?
             </h2>
             <p>

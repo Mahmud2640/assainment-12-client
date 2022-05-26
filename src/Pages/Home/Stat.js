@@ -10,42 +10,42 @@ const Stat = () => {
       <p className="lg:text-4xl text-1xl shadow-xl font-mono uppercase text-center text-secondary  font-bold my-11 hover:border-r-2 hover:border-b-2 border-green-600 rounded-full duration-200 inline-block p-4">
         Business Summary OF the year
       </p>
-      <div class="stats shadow grid lg:grid-cols-3 sm:grid-cols-1 gap-3 text-center mx-8">
-        <div class="stat">
-          <div class="stat-figure text-primary">
+      <div className="stats shadow grid lg:grid-cols-3 sm:grid-cols-1 gap-3 text-center mx-8">
+        <div className="stat">
+          <div className="stat-figure text-primary">
             <img src={svg1} alt="" />
           </div>
-          <div class="stat-title">Total Production</div>
-          <div class="stat-value text-primary">
+          <div className="stat-title">Total Production</div>
+          <div className="stat-value text-primary">
             <CountUp delay={5} end={10000} duration={2.75} />
           </div>
-          <div class="stat-desc">46% more than last month</div>
+          <div className="stat-desc">46% more than last month</div>
         </div>
 
-        <div class="stat ">
-          <div class="stat-figure text-secondary">
+        <div className="stat ">
+          <div className="stat-figure text-secondary">
             <img src={svg2} alt="" />
           </div>
-          <div class="stat-title">Successfully Delevery</div>
-          <div class="stat-value text-secondary">
+          <div className="stat-title">Successfully Delevery</div>
+          <div className="stat-value text-secondary">
             <CountUp delay={5} end={50000} duration={2.75} />
           </div>
-          <div class="stat-desc">81% more than last month</div>
+          <div className="stat-desc">81% more than last month</div>
         </div>
 
-        <div class="stat ">
-          <div class="stat-figure text-secondary">
-            <div class="avatar online">
-              <div class="w-16 rounded-full">
+        <div className="stat ">
+          <div className="stat-figure text-secondary">
+            <div className="avatar online">
+              <div className="w-16 rounded-full">
                 <img src={svg3} alt="" />
               </div>
             </div>
           </div>
-          <div class="stat-value">
+          <div className="stat-value">
             <CountUp delay={5} end={96} duration={2.75} />%
           </div>
-          <div class="stat-title">Coustomer Happiness</div>
-          <div class="stat-desc text-secondary">89% Ratting</div>
+          <div className="stat-title">Coustomer Happiness</div>
+          <div className="stat-desc text-secondary">89% Ratting</div>
         </div>
       </div>
     </div>

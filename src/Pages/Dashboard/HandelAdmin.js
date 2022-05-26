@@ -29,7 +29,7 @@ const HandelAdmin = ({ user, index }) => {
       <td>{user.email}</td>
       <td>
         {role !== "admin" && (
-          <button onClick={makeAdmin} class="btn btn-xs uppercase">
+          <button onClick={makeAdmin} className="btn btn-xs uppercase">
             Make Admin
           </button>
         )}

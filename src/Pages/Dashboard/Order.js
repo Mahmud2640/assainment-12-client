@@ -53,8 +53,8 @@ const Order = () => {
         your order list here :
       </p>
       <div>
-        <div class="overflow-x-auto">
-          <table class="table w-full text-center">
+        <div className="overflow-x-auto">
+          <table className="table w-full text-center">
             <thead>
               <tr>
                 <th></th>
