@@ -9,7 +9,7 @@ const Booking = () => {
   const [parts, setParts] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`http://localhost:5000/parts/${id}`)
+    fetch(`https://peaceful-earth-04392.herokuapp.com/parts/${id}`)
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, [id]);
@@ -47,7 +47,7 @@ const Booking = () => {
     const orders = { name, username, email, price, quantity, phone, address };
 
     // send data to the server
-    fetch("http://localhost:5000/orders", {
+    fetch("https://peaceful-earth-04392.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -16,7 +16,7 @@ const AddProduct = () => {
     console.log(products);
 
     // // send data to the server
-    fetch("http://localhost:5000/parts", {
+    fetch("https://peaceful-earth-04392.herokuapp.com/parts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
