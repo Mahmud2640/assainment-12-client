@@ -28,7 +28,7 @@ const Booking = () => {
     } else {
       setPrice(0);
       toast.error(
-        `sir Minimum order ${parts.min} and Maximum ${parts.available} pic`
+        `Please Minimum order ${parts.min} and Maximum ${parts.available}pcs`
       );
     }
   };

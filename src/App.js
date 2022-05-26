@@ -17,6 +17,7 @@ import AddProduct from "./Pages/Dashboard/AddProduct";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import SeeAll from "./Pages/Home/SeeAll";
 import Blog from "./Pages/Blog/Blog";
+import MyPortfolio from "./Pages/My Portfolio/MyPortfolio";
 
 function App() {
   return (
@@ -27,7 +28,6 @@ function App() {
         <Route path="home" element={<Home></Home>} />
         <Route path="blog" element={<Blog></Blog>} />
         <Route path="seeAll" element={<SeeAll />} />
-        {/* <Route path="dashboard" element={<Dashboard/>} /> */}
         <Route
           path="dashboard"
           element={
@@ -42,20 +42,23 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin />}></Route>
           <Route path="addProduct" element={<AddProduct />}></Route>
           <Route path="manageProducts" element={<ManageProducts />}></Route>
-          {/* <Route path="payment/:id" element={<Payment></Payment>}></Route>
-          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
-          <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
-          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route> */}
         </Route>
-        {/* login section */}
+        
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
-        {/* require */}
         <Route
           path="parts/:id"
           element={
             <RequireAuth>
               <Booking></Booking>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/portfolio"
+          element={
+            <RequireAuth>
+              <MyPortfolio></MyPortfolio>
             </RequireAuth>
           }
         ></Route>
