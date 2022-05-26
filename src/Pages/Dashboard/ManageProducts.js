@@ -3,8 +3,6 @@ import useParts from "../../hooks/useParts";
 
 const ManageProducts = () => {
   const [parts, setParts] = useParts([]);
-
-  // heandleDeleteProduct
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Sir, Are you sure ?");
     if (proceed) {

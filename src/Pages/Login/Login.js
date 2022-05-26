@@ -26,11 +26,6 @@ const Login = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  // useEffect( () =>{
-  //     if (token) {
-  //         navigate(from, { replace: true });
-  //     }
-  // }, [ from, navigate])
   if (token) {
     navigate(from, { replace: true });
   }

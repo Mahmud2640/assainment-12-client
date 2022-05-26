@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import HandelAdmin from "../Dashboard/HandelAdmin";
 
 const MakeAdmin = () => {
-  // const {data} = useQuery('users', () => fetch('https://peaceful-earth-04392.herokuapp.com/users').then(res => res.json()))
   const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch("https://peaceful-earth-04392.herokuapp.com/users")

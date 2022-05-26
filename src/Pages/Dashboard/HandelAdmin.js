@@ -2,7 +2,6 @@ import React from "react";
 import { toast } from "react-toastify";
 
 const HandelAdmin = ({ user, index }) => {
-  // onclick make admin
   const { email, role, _id } = user;
 
   const makeAdmin = () => {
@@ -35,7 +34,6 @@ const HandelAdmin = ({ user, index }) => {
           </button>
         )}
       </td>
-      {/* <td><button className='btn btn-xs uppercase'>make admin</button></td> */}
       <td>
         <button className="btn btn-xs btn-outline btn-error uppercase">
           remove

@@ -5,7 +5,6 @@ import randomUser from "../../images/userIcon.png";
 
 const Profile = () => {
   const [user] = useAuthState(auth);
-
   return (
     <div>
       <p className="text-center font-mono font-bold text-2xl mb-4 text-secondary uppercase mt-14">

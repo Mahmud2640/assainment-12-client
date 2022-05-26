@@ -22,11 +22,11 @@ import MyPortfolio from "./Pages/My Portfolio/MyPortfolio";
 function App() {
   return (
     <div className="mx-auto">
-      <Header></Header>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home></Home>} />
-        <Route path="home" element={<Home></Home>} />
-        <Route path="blog" element={<Blog></Blog>} />
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="blog" element={<Blog />} />
         <Route path="seeAll" element={<SeeAll />} />
         <Route
           path="dashboard"
@@ -36,9 +36,9 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<Profile></Profile>}></Route>
-          <Route path="review" element={<Review></Review>}></Route>
-          <Route path="order" element={<Order></Order>}></Route>
+          <Route index element={<Profile />}></Route>
+          <Route path="review" element={<Review />}></Route>
+          <Route path="order" element={<Order />}></Route>
           <Route path="makeAdmin" element={<MakeAdmin />}></Route>
           <Route path="addProduct" element={<AddProduct />}></Route>
           <Route path="manageProducts" element={<ManageProducts />}></Route>
@@ -50,7 +50,7 @@ function App() {
           path="parts/:id"
           element={
             <RequireAuth>
-              <Booking></Booking>
+              <Booking />
             </RequireAuth>
           }
         ></Route>
@@ -58,7 +58,7 @@ function App() {
           path="/portfolio"
           element={
             <RequireAuth>
-              <MyPortfolio></MyPortfolio>
+              <MyPortfolio />
             </RequireAuth>
           }
         ></Route>

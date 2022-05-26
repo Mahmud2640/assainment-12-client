@@ -15,21 +15,21 @@ const Review = () => {
         HAPPY CLIENT REVIEW{" "}
       </p>
       <div className="mx-auto grid lg:grid-cols-3 grid-cols-1 gap-8 my-11">
-        {reviews.slice(-3).map((r) => (
+        {reviews.slice(-3).map((review) => (
           <div
-            key={r._id}
+            key={review._id}
             className="card w-96 bg-base-100 mx-auto hover:border-r-4 hover:border-t-4 duration-700"
           >
             <figure className="px-10 pt-10">
               <div className="avatar">
                 <div className="w-24 rounded-full ring ring-purple-700 ring-offset-base-100 ring-offset-2">
-                  <img src={r.pic ? r.pic : randomUser} alt="" />
+                  <img src={review.pic ? review.pic : randomUser} alt="" />
                 </div>
               </div>
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">{r.name}</h2>
-              <p>{r.body}</p>
+              <h2 className="card-title">{review.name}</h2>
+              <p>{review.body}</p>
             </div>
           </div>
         ))}

@@ -19,19 +19,14 @@ const SignUp = () => {
   } = useForm();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
   const [token] = useToken(user || gUser);
-
   const navigate = useNavigate();
 
   let signInError;
-
   if (loading || gLoading || updating) {
     return <Loading />;
   }
-
   if (error || gError || updateError) {
     signInError = (
       <p className="text-red-500">
@@ -41,15 +36,12 @@ const SignUp = () => {
       </p>
     );
   }
-
   if (token) {
     navigate("/home");
   }
-
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    console.log("update done");
   };
   return (
     <div className="flex h-screen justify-center items-center">

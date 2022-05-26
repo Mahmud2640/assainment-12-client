@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mx-auto">
-        <span class="footer-title text-xl text-secondary">News~letter</span>
+        <span class="footer-title text-xl text-secondary">Newsletter</span>
         <div class="form-control w-80">
           <label class="label">
             <span class="label-text text-white">Enter your email address</span>

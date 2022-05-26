@@ -18,13 +18,11 @@ const Dashboard = () => {
           <h2 className="text-2xl font-bold text-center text-sky-300">
             User Dashboard Analytics
           </h2>
-
           <Outlet></Outlet>
         </div>
         <div class="drawer-side">
           <label for="dashboard-sidebar" class="drawer-overlay"></label>
           <ul class="menu p-4 overflow-y-auto w-48 bg-base-200 rounded-2xl text-base-content">
-            {/* <!-- Sidebar content here --> */}
             {!admin && (
               <>
                 <li>

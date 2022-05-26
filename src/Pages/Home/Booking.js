@@ -13,8 +13,6 @@ const Booking = () => {
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, [id]);
-
-  // set price per product by her quantity
   const [price, setPrice] = useState([]);
   const quantityRef = useRef();
   const quantityKeyUp = (e) => {
@@ -28,14 +26,12 @@ const Booking = () => {
     } else {
       setPrice(0);
       toast.error(
-        `Please Minimum order ${parts.min} and Maximum ${parts.available}pcs`
+        `Please add Minimum order ${parts.min} and Maximum ${parts.available}pcs`
       );
     }
   };
-  // handlleOrder for database mongodb
   const handleOrder = (e) => {
     e.preventDefault();
-    // toke value
     const name = e.target.name.value;
     const username = e.target.username.value;
     const email = e.target.email.value;
@@ -43,10 +39,8 @@ const Booking = () => {
     const quantity = e.target.quantity.value;
     const phone = e.target.phone.value;
     const address = e.target.address.value;
-
     const orders = { name, username, email, price, quantity, phone, address };
 
-    // send data to the server
     fetch("https://peaceful-earth-04392.herokuapp.com/orders", {
       method: "POST",
       headers: {
@@ -68,7 +62,6 @@ const Booking = () => {
           alt={parts.img}
         />
         <div className="mx-auto">
-          {/* form part */}
           <form onSubmit={handleOrder} className="text-center mx-auto">
             <input
               type="text"

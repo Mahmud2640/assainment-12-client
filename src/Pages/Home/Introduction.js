@@ -5,14 +5,12 @@ import tools from "../../images/parts.jpeg";
 const Introduction = () => {
   return (
     <div>
-      {/* middle text */}
       <div className="text-center">
         <h1 className="text-5xl  mt-16 italic border-b-8 border-r-8 rounded-full border-primary inline-block mx-auto pb-4 pr-2 font-bold">
           {" "}
           Welcome to Dell Official Parts!
         </h1>
       </div>
-      {/* info with hero */}
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <img src={tools} className="w-50 rounded-lg " alt="info pic" />

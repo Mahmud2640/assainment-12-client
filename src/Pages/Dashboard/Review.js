@@ -5,19 +5,13 @@ import reviewpic from "../../images/consultant.png";
 
 const Review = () => {
   const [user] = useAuthState(auth);
-
-  // handleAddProduct for database mongodb
   const handleReview = (e) => {
     e.preventDefault();
-    // toke value
     const name = user.displayName;
     const body = e.target.review.value;
     const pic = user.reloadUserInfo.photoUrl;
-
     const review = { name, body, pic };
-    // console.log(review);
 
-    // send data to the server
     fetch("https://peaceful-earth-04392.herokuapp.com/review", {
       method: "POST",
       headers: {
@@ -27,7 +21,6 @@ const Review = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("success", data);
         e.target.reset();
       });
   };
@@ -41,7 +34,6 @@ const Review = () => {
           <img className="w-9/12 " src={reviewpic} alt="Album" />
         </figure>
         <div className="card-body mx-auto">
-          {/* form part */}
           <form
             onSubmit={handleReview}
             className="text-center mx-auto my-auto  "

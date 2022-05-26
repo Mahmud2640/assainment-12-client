@@ -8,16 +8,10 @@ import useOrder from "../../hooks/useOrder";
 
 const Order = () => {
   const navigate = useNavigate();
-  // user information
   const [user] = useAuthState(auth);
-  // fetch items data
   const [items, setItems] = useState([]);
-
-  // useEffect by axios.get
   useEffect(() => {
     const getItems = async () => {
-      // get email by user
-
       const email = user.email;
       const url = `https://peaceful-earth-04392.herokuapp.com/orderss?email=${email}`;
       try {
@@ -34,17 +28,12 @@ const Order = () => {
         }
       }
     };
-    // must call function
     getItems();
   }, [user]);
-  // --------------------
   const [orders, setOrders] = useOrder([]);
-
-  // heandleDeleteProduct
   const handleDeleteOrder = (id) => {
-    const proceed = window.confirm("Sir, Are you sure ?");
+    const proceed = window.confirm("Are you sure ?");
     if (proceed) {
-      // console.log('deleted',id);
       const url = `https://peaceful-earth-04392.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
@@ -67,7 +56,7 @@ const Order = () => {
         <div class="overflow-x-auto">
           <table class="table w-full text-center">
             <thead>
-              <tr className="">
+              <tr>
                 <th></th>
                 <th>product name</th>
                 <th>email</th>
