@@ -10,8 +10,9 @@ const Review = () => {
   }, []);
   return (
     <div className="">
-      <p className="lg:text-4xl text-1xl font-mono uppercase text-center inline-block p-2 ml-4 rounded-lg text-purple-300  shadow-stone-800 font-bold bg-purple-100">
-        happy client Review
+      <p className="lg:text-4xl text-1xl text-center p-2 ml-4 rounded-lg text-primary font-bold">
+        {" "}
+        HAPPY CLIENT REVIEW{" "}
       </p>
       <div className="mx-auto grid lg:grid-cols-3 grid-cols-1 gap-8 my-11">
         {reviews.slice(-3).map((r) => (

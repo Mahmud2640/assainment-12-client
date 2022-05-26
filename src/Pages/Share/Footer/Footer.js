@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="mx-auto text-center">
         <img className="w-40 mx-auto" src={logo} alt="" />
         <p>
-          WALTON Industries Ltd.
+          DELL Industries Ltd.
           <br />
-          Providing reliable tech since 1992
+          Providing reliable tech since 1990
         </p>
       </div>
       <div className="mx-auto">

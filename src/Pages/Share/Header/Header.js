@@ -41,6 +41,12 @@ const Header = () => {
             <li>
               <Link to="home">HOME</Link>
             </li>
+            <li>
+              <Link to="seeAll">All Parts</Link>
+            </li>
+            <li>
+              <Link to="blog">BLOG</Link>
+            </li>
 
             {user && (
               <li>
@@ -57,6 +63,12 @@ const Header = () => {
         <ul className="menu menu-horizontal p-0">
           <li>
             <Link to="home">HOME</Link>
+          </li>
+          <li>
+              <Link to="seeAll">All Parts</Link>
+            </li>
+          <li>
+            <Link to="/blog">BLOG</Link>
           </li>
 
           {user && (

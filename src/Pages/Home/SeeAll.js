@@ -4,9 +4,7 @@ import useParts from "../../hooks/useParts";
 
 const SeeAll = () => {
   const [parts, setParts] = useParts([]);
-  // const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
-  // ---------------------------------
   const navigateToBooking = (id) => {
     navigate(`/parts/${id}`);
   };
@@ -15,7 +13,6 @@ const SeeAll = () => {
       <p className="text-center text-2xl font-serif font-extrabold uppercase my-9">
         see all products of our company
       </p>
-      {/* ..................... */}
       <div className="mx-auto grid lg:grid-cols-3 grid-cols-1 gap-8 my-24">
         {parts.map((part) => (
           <div

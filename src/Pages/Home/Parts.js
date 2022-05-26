@@ -6,7 +6,6 @@ const Parts = () => {
   const [parts, setParts] = useParts([]);
   // const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
-  // ---------------------------------
   const navigateToBooking = (id) => {
     navigate(`/parts/${id}`);
   };

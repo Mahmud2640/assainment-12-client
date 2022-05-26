@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../Share/Footer/Footer";
+import ContactUs from "./ContactUs";
 import Introduction from "./Introduction";
 import Parts from "./Parts";
 import Review from "./Review";
@@ -14,6 +15,7 @@ const Home = () => {
       <Parts />
       <Review />
       <Stat />
+      <ContactUs />
       <Footer />
     </div>
   );

@@ -16,6 +16,7 @@ import { ToastContainer } from "react-toastify";
 import AddProduct from "./Pages/Dashboard/AddProduct";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import SeeAll from "./Pages/Home/SeeAll";
+import Blog from "./Pages/Blog/Blog";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="home" element={<Home></Home>} />
+        <Route path="blog" element={<Blog></Blog>} />
         <Route path="seeAll" element={<SeeAll />} />
         {/* <Route path="dashboard" element={<Dashboard/>} /> */}
         <Route

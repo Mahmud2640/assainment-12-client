@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 import svg1 from "../../images/icons8-factory-50.png";
 import svg2 from "../../images/icons8-delivery-50.png";
 import svg3 from "../../images/icons8-attract-customers-48.png";
@@ -15,7 +16,9 @@ const Stat = () => {
             <img src={svg1} alt="" />
           </div>
           <div class="stat-title">Total Production</div>
-          <div class="stat-value text-primary">25.6M</div>
+          <div class="stat-value text-primary">
+            <CountUp delay={5} end={10000} duration={2.75} />
+          </div>
           <div class="stat-desc">46% more than last month</div>
         </div>
 
@@ -24,7 +27,9 @@ const Stat = () => {
             <img src={svg2} alt="" />
           </div>
           <div class="stat-title">Successfully Delevery</div>
-          <div class="stat-value text-secondary">9.6M</div>
+          <div class="stat-value text-secondary">
+            <CountUp delay={5} end={50000} duration={2.75} />
+          </div>
           <div class="stat-desc">81% more than last month</div>
         </div>
 
@@ -36,7 +41,9 @@ const Stat = () => {
               </div>
             </div>
           </div>
-          <div class="stat-value">96%</div>
+          <div class="stat-value">
+            <CountUp delay={5} end={96} duration={2.75} />%
+          </div>
           <div class="stat-title">Coustomer Happiness</div>
           <div class="stat-desc text-secondary">89% Ratting</div>
         </div>
