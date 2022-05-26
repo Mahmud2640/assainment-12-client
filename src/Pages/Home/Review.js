@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import randomUser from "../../images/favicon.png";
+import randomUser from "../../images/userIcon.png";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);

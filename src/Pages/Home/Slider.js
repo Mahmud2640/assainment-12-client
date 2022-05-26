@@ -1,7 +1,7 @@
 import React from "react";
-import banner1 from "../../images/desktop.jpg";
-import banner2 from "../../images/desktop-2.jpg";
-import banner3 from "../../images/Desktop-Group.jpg";
+import banner1 from "../../images/banner-1.png";
+import banner2 from "../../images/banner-2.jpeg";
+import banner3 from "../../images/banner-3.jpeg";
 
 const Slider = () => {
   return (

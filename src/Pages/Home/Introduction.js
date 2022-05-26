@@ -1,39 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import tools from "../../images/desktop-tool.png";
+import tools from "../../images/parts.jpeg";
 
 const Introduction = () => {
   return (
     <div>
       {/* middle text */}
       <div className="text-center">
-        <h1 className="text-5xl  mt-24 italic border-b-8 border-r-8 rounded-full border-primary inline-block mx-auto pb-4 pr-2 font-bold">
+        <h1 className="text-5xl  mt-16 italic border-b-8 border-r-8 rounded-full border-primary inline-block mx-auto pb-4 pr-2 font-bold">
           {" "}
-          WelCome to Walton PC Parts
+          Welcome to Dell Official Parts!
         </h1>
       </div>
       {/* info with hero */}
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <img src={tools} className="w-50 rounded-lg " alt="info pic" />
           <div>
             <h1 className="text-4xl font-bold text-secondary">
-              PC Parts Information !
+              Computer Parts Information !
             </h1>
             <p className="py-6 text-justify">
-              If you're looking to build your own PC, it's likely that you're
-              thinking about making sure you've got the best PC components to
-              get the job done. While the sheer number of options can make
-              choosing feel more than a little overwhelming, this guide is here
-              to help make that job a whole lot easier. There's no doubt about
-              it, learning how to build a PC is not for the faint of heart. It's
-              a job that will really test your patience and endurance and
-              there's likely to be times when you just want to throw in the
-              towel, head to your local home electronics retailer and splash out
-              on the best computer that money can buy. But, we guarantee that
-              all that hard work of building your own is going to be well worth
-              it when you feel the satisfaction of sitting back and looking at
-              the finished product.
+              We have been specializing in Dell Laptop parts and Dell laptop
+              repair services more than 20 years.Dell laptop and tablet parts
+              for consumers, businesses, government agencies, computer repair
+              shops, school districts, and corporate firms. Although we are not
+              affiliated with the Dell Computer Corporation, we have been
+              specializing in Dell Laptop parts and Dell laptop repair services
+              more than 20 years. We offer all Dell parts for your business and
+              individual Dell computer needs and have done so since
+              2002.Inventory of Dell laptop parts and refurbished Dell laptops
+              so we can replace your Dell computer if it cannot be repaired.
+              Also at this facility, is our Dell notebook recycling center.{" "}
             </p>
             <Link to="/seeAll" className="btn btn-primary">
               SEE ALL PARTS
