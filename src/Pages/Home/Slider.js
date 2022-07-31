@@ -1,7 +1,8 @@
 import React from "react";
 import banner1 from "../../images/banner-1.png";
-import banner2 from "../../images/banner-2.jpeg";
-import banner3 from "../../images/banner-3.jpeg";
+import banner2 from "../../images/banner-2.png";
+import banner3 from "../../images/banner-3.png";
+
 
 const Slider = () => {
   return (
@@ -28,6 +29,7 @@ const Slider = () => {
           </a>
         </div>
       </div>
+      
       <div id="slide3" className="carousel-item relative w-full">
         <img src={banner3} className="w-full" alt="img-2" /> /
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
